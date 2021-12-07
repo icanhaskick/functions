@@ -1,4 +1,4 @@
-# Qalgo
+# functions (algorithms)
 
 ### Quicksort
 
