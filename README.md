@@ -1,6 +1,6 @@
 # functions
 
-### quicksort
+### Quicksort
 
 ```c++
 quicksort(int v[], int pivo){
