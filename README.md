@@ -9,5 +9,5 @@ int compare (const void * a, const void * b)
 }
 
 //usar dentro do main()
-qsort(v, tam, sizeof(X), compare);
+qsort(v, tam, sizeof(int), compare);
 ```
