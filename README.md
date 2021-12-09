@@ -15,11 +15,8 @@ qsort(v, tam, sizeof(int), compare);
 
 ```c++
 //mdc
-__gcd(a, b)
+long long gcd(int a, int b) {return b == 0 ? a : gcd(b, a%b);}
 
 //mmc
-long long lcm(int a, int b)
-{
-        return (a / __gcd(a, b)) * b;
-}
+long long lcm(int a, int b) { return a*b/gcd(a, b); }
 ```
