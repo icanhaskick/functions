@@ -21,6 +21,104 @@ long long gcd(int a, int b) {return b == 0 ? a : gcd(b, a%b);}
 long long lcm(int a, int b) { return a*b/gcd(a, b); }
 ```
 
+### PEOO
+```c++
+//2
+#include <bits/stdc++.h>
+#define endl '\n'
+using namespace std;
+
+int main(){
+
+	ios_base::sync_with_stdio(0);
+	cin.tie(0); cout.tie(0);
+
+	double nota1, nota2, nota3;
+	//lê as notas
+	cin >> nota1 >> nota2 >> nota3;
+	//imprime o resultado
+	cout << (nota1 + nota2 + nota3)/3 << endl;
+	return 0;
+}
+
+//3
+#include <bits/stdc++.h>
+#define endl '\n'
+using namespace std;
+
+int main(){
+
+//	ios_base::sync_with_stdio(0);
+//	cin.tie(0); cout.tie(0);
+
+	double a, b;
+	cin >> a >> b;
+
+	//soma dos números
+	cout <<"Soma: " << a + b << endl;
+
+	//subtração do primeiro pelo segundo
+	cout << "Subtração (primeiro pelo segundo): " << a - b << endl;
+	
+	//subtração do segundo pelo primeiro
+	cout << "Subtração (segundo pelo primeiro): " << b - a << endl;
+
+	//produto dos números
+	cout << "Produto: " << a*b << endl;
+
+	//divisão do primeiro pelo segundo
+	cout << "Divisão (primeiro pelo segundo): " << a/b << endl;
+
+	//quociente inteiro da divisão do primeiro pelo segundo
+	int c = a, d = b;
+	cout << "Quociente inteiro da divisão do primeiro pelo segundo: " << c/d << endl;
+
+	//resto da divisão
+	cout << "Resto da divisão: " << c%d << endl;
+	return 0;
+}
+
+//4
+#include <bits/stdc++.h>
+#define endl '\n'
+using namespace std;
+
+int main(){
+
+	ios_base::sync_with_stdio(0);
+	cin.tie(0); cout.tie(0);
+
+	string palavra;
+	string aux;
+	//res será nosso resultado
+	bool res = true;
+	cin >> palavra;
+
+	//inversão da string palavra (que será armazenada na string aux)
+	
+	for(int j = palavra.length()-1; j > -1 ; j--){
+		aux += palavra[j];
+	}
+
+	//comparação da string palavra com string aux
+	//caso uma letra seja diferente o laço é quebrado e será atribuído o valor false para res (a palavra não é um palíndromo)
+	
+	for(int i = 0; i < palavra.length(); i++){
+		if(aux[i] != palavra[i]){
+			res = false;
+			break;
+		}
+	}
+	//caso a variável res seja verdadeira a palavra é um palíndromo
+	//caso contrário a palavra não é um palindromo
+	if(res == true) cout << "Palíndromo" << endl;
+	else cout << "Não Palíndromo" << endl;
+	return 0;
+}
+
+
+```
+
 ```c++
 //1
 
