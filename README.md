@@ -23,6 +23,12 @@ long long lcm(int a, int b) { return a*b/gcd(a, b); }
 
 ### PEOO
 ```c++
+//1
+a) 24	e) 53.25
+b) 6	f) 10
+c) 0	g) 3
+d) 0	h) 1
+
 //2
 #include <bits/stdc++.h>
 #define endl '\n'
