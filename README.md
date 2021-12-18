@@ -159,6 +159,39 @@ int main(){
 	return 0;
 }
 
+//7
+#include <bits/stdc++.h>
+#define endl '\n'
+using namespace std;
+
+int main(){
+
+	ios_base::sync_with_stdio(0);
+	cin.tie(0); cout.tie(0);
+
+	int v[5], codigo;
+	for(int i = 0; i < 5; i++){
+		cin >> v[i];
+	}
+	cin >> codigo;
+	if(codigo == 0);
+	else if(codigo == 1){
+		for(int i = 0; i < 5; i++){
+			cout << v[i];
+			if(i < 4) cout << " ";
+		}
+		cout << endl;
+	}
+	else if(codigo == 2){
+		for(int i = 4; i > -1; i--){
+			cout << v[i];
+			if(i > 0) cout << " ";
+		}
+		cout << endl;
+	}
+	else cout << "Código inválido." << endl;
+	return 0;
+}
 
 
 ```
