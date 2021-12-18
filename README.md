@@ -116,6 +116,50 @@ int main(){
 	return 0;
 }
 
+//6
+#include <bits/stdc++.h>
+#define endl '\n'
+using namespace std;
+
+int main(){
+
+	ios_base::sync_with_stdio(0);
+	cin.tie(0); cout.tie(0);
+
+	string a, sub, res;
+	cin >> a >> sub;
+	int cont;
+
+	for(int i = 0; i < a.length(); i++){
+		//caso a letra da palavra seja igual a primeira letra da substring entrar no laço
+		if(a[i] == sub[0]){
+			cont = 0;
+			for(int j = i, k = 0; k < sub.length(); j++, k++){
+				//somar a variável cont caso a sequência de letras seja igual a substring
+				if(a[j] == sub[k]) ++cont;
+
+				//caso a sequência de palavras seja diferente da sequência
+				//da substring, então, sair do laço (consequentemente não há uma substring
+				//nesse pedaço da palavra)
+				else break;		
+			}
+			//caso a variável cont possuir o mesmo tamanho da substring
+			//adicionar (*) a posição correspondente a substring
+			//além disso, atualizar a posição da variável i para a próxima letra
+			//após a substring
+			if(cont == sub.length()){
+			       	res += "*";
+				i+=sub.length()-1;
+			}
+		}
+		//caso a letra não seja igual a da substring precisamos apenas adicionar a letra atual a string res
+		else res+=a[i];
+	}
+	cout << res << endl;
+	return 0;
+}
+
+
 
 ```
 
