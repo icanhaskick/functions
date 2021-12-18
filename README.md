@@ -193,6 +193,30 @@ int main(){
 	return 0;
 }
 
+//5 (funciona [elaborar explicação])
+#include<stdio.h>
+
+int main(void){
+  float nota[100];
+  int n, i;
+
+  // float notas[5] = {7,8,9.5,9.9,5.2};
+  // printf("Notas[0] = %0.1f\n", notas[0]);
+  // printf("Notas[1] = %0.1f\n", notas[1]);
+  // printf("Notas[2] = %0.1f\n", notas[2]);
+  // printf("Notas[3] = %0.1f\n", notas[3]);
+  // printf("Notas[4] = %0.1f\n", notas[4]);
+
+  printf("Número de alunos: ");
+  scanf("%d", &n);
+  for(i = 0; i < n; i++){
+    printf("Digite a nota do aluno %d: ", i);
+    scanf("%f", &nota[i]);
+  }
+
+	return 0;
+}
+
 
 ```
 
