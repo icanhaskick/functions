@@ -133,7 +133,8 @@ int main(){
 	cin.tie(0); cout.tie(0);
 
 	string a, sub, res;
-	cin >> a >> sub;
+	getline(cin, a);
+	cin >> sub;
 	int cont;
 
 	for(int i = 0; i < a.length(); i++){
@@ -164,6 +165,7 @@ int main(){
 	cout << res << endl;
 	return 0;
 }
+
 
 //7
 #include <bits/stdc++.h>
