@@ -98,8 +98,8 @@ int main(){
 	string aux;
 	//res será nosso resultado
 	bool res = true;
-	cin >> palavra;
-
+//	cin >> palavra;
+	getline(cin, palavra);
 	//inversão da string palavra (que será armazenada na string aux)
 	
 	for(int j = palavra.length()-1; j > -1 ; j--){
