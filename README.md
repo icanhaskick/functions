@@ -201,6 +201,25 @@ int main(){
 	return 0;
 }
 
+//12
+    #include <bits/stdc++.h>
+    #define endl '\n'
+    using namespace std;
+     
+    int fib(int a){
+	    if (a <= 2) return 1;
+	    else return fib(a-1) + fib(a-2);
+    }
+
+    int main(){
+     
+	int a;
+	cout << "Digite a posição do termo da sequência" << endl;
+	cin >> a;
+	cout << fib(a) << endl;
+	return 0;
+    } 
+
 //5 (funciona [elaborar explicação])
 #include<stdio.h>
 
