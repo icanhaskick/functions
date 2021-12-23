@@ -208,6 +208,9 @@ int main(){
 }
 
 //12
+
+/*A recursividade de funcoes se consiste na chamada recursiva de uma funcao, na qual a propria funcao chama a ela mesma. Uma de suas vantagens e a economia e reutilizacao de codigo, facilitando a resolucao de problemas e economizando espaco no codigo. Por outro lado, uma desvantagem pode ser sua complexidade de aplicacao e a grande quantidade de chamadas na pilha, diminuindo a velocidade de execucao do programa.*/
+
 #include <bits/stdc++.h>
 #define endl '\n'
 using namespace std;
