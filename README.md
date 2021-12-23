@@ -91,9 +91,7 @@ using namespace std;
 
 int main(){
 
-	ios_base::sync_with_stdio(0);
-	cin.tie(0); cout.tie(0);
-
+	cout << "Digite uma frase: " << endl;
 	string palavra;
 	string aux, aux1;
 	//res será nosso resultado
