@@ -233,7 +233,7 @@ int main(){
 } 
 
 
-//5 (funciona [elaborar explicação])
+//5 (Nao funciona, pois falta fechar o colchete da funcao main())
 #include<stdio.h>
 
 int main(void){
