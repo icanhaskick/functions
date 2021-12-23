@@ -95,22 +95,33 @@ int main(){
 	cin.tie(0); cout.tie(0);
 
 	string palavra;
-	string aux;
+	string aux, aux1;
 	//res será nosso resultado
 	bool res = true;
-//	cin >> palavra;
 	getline(cin, palavra);
-	//inversão da string palavra (que será armazenada na string aux)
-	
-	for(int j = palavra.length()-1; j > -1 ; j--){
-		aux += palavra[j];
+	//vamos pular os espacos e caracteres indesejados da nossa string original e armazena-los em aux1
+	for(int i = 0; i < palavra.length(); i++){
+		if(palavra[i] == '!') i++;
+		else if(palavra[i] == '-');
+		else if(palavra[i] == '?');
+		else if(palavra[i] == ',');
+		else if(palavra[i] == '.');
+		else if(palavra[i] != ' ') aux1 += palavra[i];
+	}
+	//Vamos transformar todas as letras em letras minusculas para facilitar a comparacao futuramente
+	for(int i = 0; i < aux1.length(); i++){
+		aux1[i] = tolower(aux1[i]);
+	}
+	//inversão da string aux1 (que será armazenada na string aux)
+	for(int j = aux1.length()-1; j > -1 ; j--){
+		aux += aux1[j];
 	}
 
-	//comparação da string palavra com string aux
+	//comparação da string aux1 com string aux
 	//caso uma letra seja diferente o laço é quebrado e será atribuído o valor false para res (a palavra não é um palíndromo)
 	
-	for(int i = 0; i < palavra.length(); i++){
-		if(aux[i] != palavra[i]){
+	for(int i = 0; i < aux1.length(); i++){
+		if(aux[i] != aux1[i]){
 			res = false;
 			break;
 		}
