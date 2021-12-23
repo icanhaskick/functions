@@ -53,13 +53,11 @@ int main(){
 using namespace std;
 
 int main(){
-
-//	ios_base::sync_with_stdio(0);
-//	cin.tie(0); cout.tie(0);
-
-	double a, b;
+  
+	int a, b;
 	cin >> a >> b;
-
+  double c = a, d = b;
+  double div = c/d;
 	//soma dos números
 	cout <<"Soma: " << a + b << endl;
 
@@ -73,14 +71,13 @@ int main(){
 	cout << "Produto: " << a*b << endl;
 
 	//divisão do primeiro pelo segundo
-	cout << "Divisão (primeiro pelo segundo): " << a/b << endl;
+	cout << "Divisão (primeiro pelo segundo): " << div << endl;
 
 	//quociente inteiro da divisão do primeiro pelo segundo
-	int c = a, d = b;
-	cout << "Quociente inteiro da divisão do primeiro pelo segundo: " << c/d << endl;
+	cout << "Quociente inteiro da divisão do primeiro pelo segundo: " << a/b << endl;
 
 	//resto da divisão
-	cout << "Resto da divisão: " << c%d << endl;
+	cout << "Resto da divisão: " << a%b << endl;
 	return 0;
 }
 
