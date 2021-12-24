@@ -255,6 +255,48 @@ int main(void){
 	return 0;
 }
 
+//14
+
+#include <bits/stdc++.h>
+#define endl '\n'
+using namespace std;
+
+void troca1(int *d){
+  int aux = 20;
+  *d = aux;
+}
+
+void troca2(double *e){
+  double aux = 4.4;
+  *e = aux;
+}
+
+void troca3(char *f){
+  char aux = 'b';
+  *f = aux;
+}
+
+int main(){
+  int a = 10;
+  double b = 3.3;
+  char c = 'c';
+
+  cout << "Valor inicial da variavel inteira: " << a << endl;
+  cout << "Valor inicial da variavel real: " << b << endl;
+  cout << "Valor inicial da variavel char: " << c << endl;
+
+  troca1(&a);
+  cout << "Novo valor atribuido a variavel inteira: " << a << endl;
+
+  troca2(&b);
+  cout << "Novo valor atribuido a variavel real: " << b << endl;
+
+  troca3(&c);
+  cout << "Novo caractere atribuido a variavel char: " << c << endl;
+  return 0;
+}
+
+
 
 ```
 
