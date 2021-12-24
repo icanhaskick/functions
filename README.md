@@ -172,7 +172,6 @@ int main(){
 	return 0;
 }
 
-
 //7
 #include <bits/stdc++.h>
 #define endl '\n'
@@ -180,13 +179,13 @@ using namespace std;
 
 int main(){
 
-	ios_base::sync_with_stdio(0);
-	cin.tie(0); cout.tie(0);
-
-	int v[5], codigo;
+	double v[5];
+  int codigo;
+  cout << "Digite os valores do vetor: ";
 	for(int i = 0; i < 5; i++){
 		cin >> v[i];
 	}
+  cout << "Digite o codigo: ";
 	cin >> codigo;
 	if(codigo == 0);
 	else if(codigo == 1){
