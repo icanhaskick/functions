@@ -261,17 +261,20 @@ int main(void){
 using namespace std;
 
 void troca1(int *d){
-  int aux = 20;
+  int aux;
+  cin >> aux;
   *d = aux;
 }
 
 void troca2(double *e){
-  double aux = 4.4;
+  double aux;
+  cin >> aux;
   *e = aux;
 }
 
 void troca3(char *f){
-  char aux = 'b';
+  char aux;
+  cin >> aux;
   *f = aux;
 }
 
@@ -294,7 +297,6 @@ int main(){
   cout << "Novo caractere atribuido a variavel char: " << c << endl;
   return 0;
 }
-
 ```
 
 ```c++
