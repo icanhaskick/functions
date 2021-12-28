@@ -279,9 +279,11 @@ void troca3(char *f){
 }
 
 int main(){
-  int a = 10;
-  double b = 3.3;
-  char c = 'c';
+  int a;
+  double b;
+  char c;
+
+  cin >> a >> b >> c;  
 
   cout << "Valor inicial da variavel inteira: " << a << endl;
   cout << "Valor inicial da variavel real: " << b << endl;
@@ -297,6 +299,7 @@ int main(){
   cout << "Novo caractere atribuido a variavel char: " << c << endl;
   return 0;
 }
+
 ```
 
 ```c++
