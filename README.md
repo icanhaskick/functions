@@ -563,4 +563,70 @@ int main(){
 
 }
 
+//struct (RG)
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define endl '\n'
+
+//criação do struct
+struct pessoa{
+	int rg;
+	int cpf;
+	string nome;
+};
+
+//função que define o critério de organização para a função sort() poder ordenar os cadastrados baseado no valor do rg
+bool compare(pessoa a, pessoa b){
+	if(a.rg < b.rg)
+		return 1;
+	else 
+		return 0;
+}
+
+//função de busca pelo rg inserido no final do programa
+int busca(pessoa cadastro[], int rg_busca, int quant_pessoas){
+	int encontrou = -1;
+	//laço que passa pelos RG's, caso o valor inserido coincida com um rg
+	//do vetor, retornamos a variável encontrou
+	//(que contem a posição do RG no vetor ordenado)
+	for(int i = 0; i < quant_pessoas; i++){
+		if(cadastro[i].rg == rg_busca) encontrou = (i+1);
+	}
+
+	if(encontrou != -1) return encontrou;
+	else return -1;
+}
+int main(){
+	struct pessoa cadastro[100];
+	unsigned int quant_pessoas, rg_busca;
+	cout << "Digite a quantidade de cadastrados: ";
+	cin >> quant_pessoas;
+
+	//entrada de dados
+	for(int i = 0; i < quant_pessoas; i++){
+		cout << "Digite seu primeiro nome: ";
+		cin >> cadastro[i].nome;
+		
+		cout << "Digite seu cpf: ";
+		cin >> cadastro[i].cpf;
+
+		cout << "Digite seu rg: ";
+		cin >> cadastro[i].rg;
+		
+	}
+	//ordenação crescente do vetor de cadastrados baseado no valor do rg
+	sort(cadastro, cadastro + quant_pessoas, compare);
+
+	cout << "Digite o numero do rg a ser buscado: ";
+	cin >> rg_busca;
+	cout << endl;
+
+	//final do programa (chamando a função de busca)
+	cout << "O RG indicado encontra-se no indice: " << busca(cadastro, rg_busca, quant_pessoas) << " do vetor RG ordenado (caso o valor seja -1 o RG inserido nao existe)" << endl;
+	return 0;
+}
+
+
 ```
