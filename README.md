@@ -628,5 +628,62 @@ int main(){
 	return 0;
 }
 
+//concatenação de veotres com ponteiro
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define endl '\n'
+
+int *concatena(int *v1, int tam1, int *v2, int tam2){
+	//inicializando o vetor v3 sem nada e atribuindo
+	//a quantidade de memoria equivalente a soma dos vetores v1 e v2
+	int *v3 = NULL;
+	v3 = (int*) realloc(v3,(tam1 + tam2)*sizeof(int));
+
+	//atribuindo ao vetor v3 o vetor v1
+	for(int i=0; i < tam1; i++){
+		v3[i] = v1[i];
+	}
+	//atribuindo ao vetor v3 o vetor v2
+	for(int i=tam1; i < tam1+tam2; i++){
+		v3[i] = v2[i];
+	}
+	return v3;
+}
+
+int main(){
+	int tam1, tam2;
+	
+	cout << "Digite o tamanho do vetor 1: ";
+	cin >> tam1;
+	cout << "Digite o tamanho do vetor 2: ";
+	cin >> tam2;
+
+	int *v1, *v2, *v3;
+
+	v1 = (int*)malloc(tam1*sizeof(int));
+	v2 = (int*)malloc(tam2*sizeof(int));
+
+	cout << "Digite os elementos do vetor 1:" << endl;
+	for(int i = 0; i < tam1; i++){
+		cin >> v1[i];
+	}
+	cout << "Digite os elementos do vetor 2:" << endl;
+	for(int i = tam1; i < tam2+tam1; i++){
+		cin >> v2[i];
+	}
+
+	v3 = concatena(v1, tam1, v2, tam2);
+	
+	cout << "Vetor concatenado:" << endl;
+	for(int i = 0; i < tam1+tam2; i++){
+		cout << v3[i] << " ";
+	}
+	cout << endl;
+	return 0;
+}
+
+
 
 ```
