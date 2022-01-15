@@ -684,6 +684,40 @@ int main(){
 	return 0;
 }
 
+//fib AP2
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define endl '\n'
+
+int fib(int n){
+	if(n >= 1) return fib(n-1) + fib(n-2);
+	else return 1;
+}
+int main(){
+
+	int n, *v, *p;
+	cout << "Digite a quantidade de digitos para a sequencia de fibonacci: ";
+	cin >> n;
+	
+	p = (int*)malloc(n*sizeof(int));
+	cout << "Vetor original:" << endl;
+	for(int i = 0; i <=n ;i++){
+		p[i] = fib(i);
+		cout << p[i] << endl;
+	}
+	//ordena em ordem decrescente
+	sort(p, p+n+1, greater<int>());
+	v = (int*)realloc(p, n*sizeof(int));
+	cout << "Vetor invertido:" << endl;
+	for(int i = 0; i <=n ;i++){
+		cout << v[i] << endl;
+	}
+	return 0;
+}
+
+
 
 
 ```
